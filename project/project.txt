@@ -1,0 +1,47 @@
+目标网站：SauceDemo (一个电商模拟网站) 或 The Internet Herokuapp。
+工具准备：下载 VS Code 或 PyCharm（社区版），不要再用 Coursera 网页里的编辑器了，必须在本地跑代码。
+第二步：完成三个递进式的小项目
+请按顺序完成以下三个任务，这涵盖了你学过的所有核心课程：
+项目 1：自动登录机器人 (复习 Selenium + 基础 Python)
+任务：
+打开 SauceDemo 网站。
+找到用户名输入框，输入 standard_user。
+找到密码框，输入 secret_sauce。
+点击登录按钮。
+关键点（断言）：获取登录后页面左上角的 "Products" 文本，用 Python 的 if 语句判断：如果文字存在，打印“测试通过”；否则打印“测试失败”。
+应用课程：Web and Mobile Testing with Selenium + Getting Started with Python。
+
+项目 2：数据驱动的价格验证器 (复习 Access Web Data + Data Structures)
+任务：
+登录后，获取页面上所有商品的价格（比如 $29.99, $9.99 等）。
+数据清洗：利用你学的字符串处理方法，把 $ 符号去掉，把字符串转成 float 类型。
+存入结构：把商品名和价格存到一个 Python 字典 (Dictionary) 或 列表 (List) 中。
+逻辑验证：写代码计算这些商品价格的平均值，或者找出最贵的商品打印出来。
+应用课程：Python Data Structures + Using Python to Access Web Data (解析 HTML 逻辑)。
+
+项目 3：基于 OOP 的测试框架改造 (复习 Classes and Inheritance —— 最重要的一步)
+痛点：项目 1 和 2 的代码可能都写在一个 .py 文件里，乱糟糟的。
+任务：使用 Page Object Model (POM) 设计模式重构代码。
+创建一个 BasePage 类（Class），把 driver.find_element 这种基础操作封装进去。
+创建一个 LoginPage 类，继承自 BasePage，里面只写 login() 方法。
+创建一个 InventoryPage 类，继承自 BasePage，里面只写 get_prices() 方法。
+新建一个 main.py，实例化这些类来执行测试。
+应用课程：Python Classes and Inheritance。这是你从“脚本小子”进化到“测试开发”的关键。
+
+第三步：建立 GitHub 仓库 (复习 Tools for Data Science)
+你之前学的 Tools for Data Science 讲了 Git。现在要用了。
+强制动作：
+在 GitHub 上新建一个仓库叫 Selenium-Python-Practice。
+每天写完代码后，必须在本地终端执行：
+code
+Bash
+git add .
+git commit -m "完成了登录页面的OOP重构"
+git push
+价值：这一步不仅复习了 Git，更是把你隐形的知识变成了可见的资产。以后面试，直接把这个链接发给 HR，比说“我学过 Coursera 课程”管用一百倍。
+
+总结你的行动指南：
+本周不要看新课。
+今天晚上：配置好本地 Python 环境，写出项目 1（简单的 Selenium 登录脚本）。
+周末：尝试用 Class（类）去重构它。
+只有当你在这个过程中报错、去查 StackOverflow、调试、最后跑通的时候，那些知识才会真正刻在你的脑子里。 祝你 Debug 愉快！
